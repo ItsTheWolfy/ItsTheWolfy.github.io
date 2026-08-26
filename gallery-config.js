@@ -12,6 +12,7 @@
 const GALLERY_IMAGES = {
   portraits: [
     'photos/portraits/Juni_wall.jpg',
+    'photos/portraits/stitch_T.jpg',
   ],
   urban: [
     // 'photos/urban/filename.jpg',
