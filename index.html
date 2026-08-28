@@ -229,6 +229,67 @@
       color: var(--accent); 
       text-decoration: none; 
     }
+
+    /* Review List – compact, scalable */
+    .review-list {
+      list-style: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .review-list li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .review-list li:last-child {
+      border-bottom: none;
+    }
+
+    .review-list a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+
+    .review-list a:hover {
+      background: var(--card-bg);
+      color: var(--accent);
+    }
+
+    .review-list .rl-tag {
+      flex-shrink: 0;
+      background: #0f172a;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .review-list .rl-title {
+      flex: 1;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .review-list .rl-arrow {
+      flex-shrink: 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .review-list a:hover .rl-arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
   </style>
 </head>
 <body>
@@ -280,33 +341,36 @@
 <!-- ==================== WRITING / REVIEWS SECTION ==================== -->
     <section id="articles">
       <h2>Writing & Analysis</h2>
-      <div class="card-grid">
+      <ul class="review-list">
 
         <!-- Alien -->
-        <a href="alien-review.html" class="card">
-          <span class="tag">Film Analysis</span>
-          <h3>Working-Class Dread: Ridley Scott's Alien (1979)</h3>
-          <p>An analysis of industrial realism, biomechanical horror, and blue-collar survival in deep space.</p>
-          <span class="card-cta">Read Review &rarr;</span>
-        </a>
+        <li>
+          <a href="alien-review.html">
+            <span class="rl-tag">Film Analysis</span>
+            <span class="rl-title">Working-Class Dread: Ridley Scott's Alien (1979)</span>
+            <span class="rl-arrow">&rarr;</span>
+          </a>
+        </li>
 
         <!-- Blade Runner -->
-        <a href="blade-runner-review.html" class="card">
-          <span class="tag">Film Analysis</span>
-          <h3>The Architecture of Grief: Ridley Scott's Blade Runner</h3>
-          <p>How chiaroscuro lighting, Vangelis's synthetic dirge, and Rutger Hauer's final monologue transform a sci-fi procedural into a meditation on mortality.</p>
-          <span class="card-cta">Read Review &rarr;</span>
-        </a>
+        <li>
+          <a href="blade-runner-review.html">
+            <span class="rl-tag">Film Analysis</span>
+            <span class="rl-title">The Architecture of Grief: Ridley Scott's Blade Runner</span>
+            <span class="rl-arrow">&rarr;</span>
+          </a>
+        </li>
 
         <!-- Scarface -->
-        <a href="scarface-review.html" class="card">
-          <span class="tag">Film Analysis</span>
-          <h3>The Architecture of Excess: Brian De Palma's Scarface</h3>
-          <p>How De Palma's operatic visual grammar, Alonzo's neon-bleached cinematography, and Pacino's kinetic theatricality reframe a crime procedural as a portrait of American consumerism eating itself from within.</p>
-          <span class="card-cta">Read Review &rarr;</span>
-        </a>
+        <li>
+          <a href="scarface-review.html">
+            <span class="rl-tag">Film Analysis</span>
+            <span class="rl-title">The Architecture of Excess: Brian De Palma's Scarface</span>
+            <span class="rl-arrow">&rarr;</span>
+          </a>
+        </li>
 
-      </div>
+      </ul>
     </section>
     </main>
 
